@@ -24,6 +24,7 @@
 		729866FE181D53DD008A365C /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 729866FD181D53DD008A365C /* ContainerViewController.m */; };
 		72986701181D53F7008A365C /* ContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72986700181D53F7008A365C /* ContainerView.m */; };
 		72C5F8B11822D39800627447 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C5F8B01822D39800627447 /* Settings.m */; };
+		72DC3AAC1B867F6700F7C866 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72DC3AAB1B867F6700F7C866 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		72986700181D53F7008A365C /* ContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerView.m; sourceTree = "<group>"; };
 		72C5F8AF1822D39800627447 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		72C5F8B01822D39800627447 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		72DC3AAB1B867F6700F7C866 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				72C5F8B01822D39800627447 /* Settings.m */,
 				72335E5818143E5D00CE78B2 /* Main_iPhone.storyboard */,
 				72335E5B18143E5D00CE78B2 /* Main_iPad.storyboard */,
+				72DC3AAB1B867F6700F7C866 /* Launch Screen.storyboard */,
 				72335E5E18143E5D00CE78B2 /* SearchViewController.h */,
 				72335E5F18143E5D00CE78B2 /* SearchViewController.m */,
 				729866FC181D53DD008A365C /* ContainerViewController.h */,
@@ -228,6 +231,7 @@
 				72335E5D18143E5D00CE78B2 /* Main_iPad.storyboard in Resources */,
 				72335E6218143E5D00CE78B2 /* Images.xcassets in Resources */,
 				72335E5A18143E5D00CE78B2 /* Main_iPhone.storyboard in Resources */,
+				72DC3AAC1B867F6700F7C866 /* Launch Screen.storyboard in Resources */,
 				72335E5118143E5D00CE78B2 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +377,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = NewLaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -395,7 +398,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = NewLaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
