@@ -387,7 +387,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dictionary/Dictionary-Prefix.pch";
 				INFOPLIST_FILE = "Dictionary/Dictionary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.recurringdream.dictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,7 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Dictionary/Dictionary-Prefix.pch";
 				INFOPLIST_FILE = "Dictionary/Dictionary-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.recurringdream.dictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
