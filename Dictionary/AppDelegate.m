@@ -23,9 +23,8 @@
         _containerViewController = [splitViewController.viewControllers lastObject];
     }
 
-    // Set the whole app tint color to our signature red, but many specific controls using the same red as *bartintcolor* will changet the tintColor to white
+    // Set the whole app tint color to our signature red
     self.window.tintColor = [UIColor dictionaryRed];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     return YES;
 }
 							
