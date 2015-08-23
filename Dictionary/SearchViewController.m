@@ -1,5 +1,5 @@
 //
-//  ViewController.m
+//  SearchViewController.m
 //  Dictionary
 //
 //  Created by Jeff Hokit on 10/20/13.
@@ -59,7 +59,7 @@
 
 //------------------------------------------------------------------------------
 // Present a UIReferenceLibraryViewController showing a definition.
-// Variations for iPad and iPhone
+// Variations for regular and compact size class environments
 //------------------------------------------------------------------------------
 -(void)presentReferenceViewControllerWithTerm:(NSString*)term
 {
@@ -69,7 +69,8 @@
     // Always have to make a new UIReferenceLibraryViewController for each word
     UIReferenceLibraryViewController *referenceLibraryViewController = [[UIReferenceLibraryViewController alloc] initWithTerm:term];
 
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) // iPad Case
+    // Only when size class is regular (at this writing, on iPad in full screen mode).
+    if ([UIApplication sharedApplication].keyWindow.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular)
     {
         AppDelegate *appDelegate = (AppDelegate*)[[UIApplication sharedApplication]delegate];
         
@@ -95,7 +96,7 @@
         // get the keyboard out of the way
         [self.searchBar resignFirstResponder];
     }
-    else // iPhone case
+    else // compact (iPhone & iPad split screen) case
     {
         // Simply present in a fullscreen modal view
         // Cant push onto a navigation stack because of the peculiar behavour of the NavBar within the controller.
@@ -316,5 +317,29 @@
     [[NSUserDefaults standardUserDefaults] setObject:self.recentSearches forKey:kRecentSearchesKey];
 }
 
+
+- (void) traitCollectionDidChange: (UITraitCollection *) previousTraitCollection {
+    [super traitCollectionDidChange: previousTraitCollection];
+    if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
+        || self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass) {
+        NSLog(@"trait collection changed");
+    }
+    
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size
+       withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator> _Nonnull)coordinator
+{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    NSLog(@"size transitioned");
+
+}
+
+- (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection
+              withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator> _Nonnull)coordinator
+{
+    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
+    NSLog(@"will transition to Trait");
+}
 
 @end

@@ -65,5 +65,16 @@
     return NO;
 }
 
+//------------------------------------------------------------------------------
+// Return NO to indicate we don't want the secondaryViewController stacked
+// on top of the primaryViewController when collapsing.
+// This is because we use a different presentation (modal vs. nav stack) when
+// presenting in a compact form in order to work around UIReferenceLibraryViewController weirdness.
+// (see SearchViewController:presentReferenceViewControllerWithTerm)
+//------------------------------------------------------------------------------
+-(BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController
+{
+    return YES;
+}
 
 @end

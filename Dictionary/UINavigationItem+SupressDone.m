@@ -14,7 +14,7 @@
 
 //------------------------------------------------------------------------------
 // Patch the UIReferenceLibraryViewController to hide the done button
-//  when it is presented in our containter view.
+//  when it is presented in our container view (in the detail side of a UISplitViewController)
 //
 // By patching UINavigationItem we're able to intercept when it's being
 // added to the bar.
@@ -47,8 +47,10 @@
     // call the old implementation, now under the new message signature
     [self nuSetRightBarButtonItem:item animated:animated];
     
-    // on iPad only
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    // Only when size class is regular (at this writing, on iPad in full screen mode).
+    // Checking the application's key window seems to be the best way to get our container's size class in the
+    //  ios9 split screen environment
+    if ([UIApplication sharedApplication].keyWindow.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular)
     {
         // if the target of the button item being added is a UIReferenceLibraryViewController,
         // thus assuring us that we've found the correct UIBarButtonItem
