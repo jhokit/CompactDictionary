@@ -20,17 +20,14 @@
     return self;
 }
 
+//------------------------------------------------------------------------------
+// Add a navigation view to fill the screen until the first definition is shown
+//------------------------------------------------------------------------------
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
 	// Add a navigation view to fill the screen until the first definition is shown
-    
-// This code installs a view contoller withing the UINavigationController, so we can set a title. Decided not to do this for now, just more noise.
-//   UIViewController *placeholderViewController = [[UIViewController alloc] init];
-//   placeholderViewController.title = @"Compact Dictionary";
-//   UINavigationController *placeholder = [[UINavigationController alloc] initWithRootViewController:placeholderViewController];
-    
     UINavigationController *placeholder = [[UINavigationController alloc] init];
     [self addChildViewController:placeholder];
     placeholder.view.frame = self.view.bounds;
@@ -39,11 +36,6 @@
 }
 
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 

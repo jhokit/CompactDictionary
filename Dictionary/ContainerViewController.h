@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SearchViewController.h"
 
 @interface ContainerViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet SearchViewController *searchViewController;
 
 @end

@@ -318,28 +318,6 @@
 }
 
 
-- (void) traitCollectionDidChange: (UITraitCollection *) previousTraitCollection {
-    [super traitCollectionDidChange: previousTraitCollection];
-    if ((self.traitCollection.verticalSizeClass != previousTraitCollection.verticalSizeClass)
-        || self.traitCollection.horizontalSizeClass != previousTraitCollection.horizontalSizeClass) {
-        NSLog(@"trait collection changed");
-    }
-    
-}
 
-- (void)viewWillTransitionToSize:(CGSize)size
-       withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator> _Nonnull)coordinator
-{
-    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-    NSLog(@"size transitioned");
-
-}
-
-- (void)willTransitionToTraitCollection:(UITraitCollection * _Nonnull)newCollection
-              withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator> _Nonnull)coordinator
-{
-    [super willTransitionToTraitCollection:newCollection withTransitionCoordinator:coordinator];
-    NSLog(@"will transition to Trait");
-}
 
 @end

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SearchViewController.h
 //  Dictionary
 //
 //  Created by Jeff Hokit on 10/20/13.
