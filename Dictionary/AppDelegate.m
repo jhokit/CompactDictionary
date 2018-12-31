@@ -20,6 +20,7 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
         splitViewController.delegate = self;
+        splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible; //make sure that both parts of the split view remain onscreen
         _containerViewController = [splitViewController.viewControllers lastObject];
     }
 
@@ -57,16 +58,7 @@
 
 
 //------------------------------------------------------------------------------
-// In this delegate method make sure that both parts of the split view
-// remain onscreen
-//------------------------------------------------------------------------------
-- (BOOL)splitViewController:(UISplitViewController *)svc shouldHideViewController:(UIViewController *)vc inOrientation:(UIInterfaceOrientation)orientation
-{
-    return NO;
-}
-
-//------------------------------------------------------------------------------
-// Return NO to indicate we don't want the secondaryViewController stacked
+// Return YES to indicate we don't want the secondaryViewController stacked
 // on top of the primaryViewController when collapsing.
 // This is because we use a different presentation (modal vs. nav stack) when
 // presenting in a compact form in order to work around UIReferenceLibraryViewController weirdness.
